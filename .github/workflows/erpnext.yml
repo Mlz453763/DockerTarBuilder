@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       docker_images:
-        description: 'Mlz453763/erpnext:latest'
+        description: 'frappe/erpnext:latest'
         required: true
-        default: 'Mlz453763/erpnext'  # 设置默认的 Docker 镜像列表
+        default: 'frappe/erpnext'  # 设置默认的 Docker 镜像列表
 
 jobs:
   pull_and_package:
@@ -37,4 +37,4 @@ jobs:
 
     - name: Clean up intermediate files
       run: |
-        rm *-arm64.tar
+        rm *-erpnext.tar
